@@ -214,6 +214,20 @@ There are several links related to this:
 	2. Adding a grub parameter to "`/etc/default/grub`" file.
 This thing was pointed out to me by [Artem Baranov](https://www.linkedin.com/in/artem-baranov-86163135) and this [link](https://blog.delouw.ch/2017/04/18/signing-linux-kernel-kodules-and-enforce-to-load-only-signed-modules/) was shared to me, on my linkedin post, by [Victor Sergeev](https://ae.linkedin.com/in/victor-sergeev/), for further research.
 
+### Detections:
+#### 1. Blog by [@thomrstrom](https://triangletoot.party/@thomrstrom) : [diy-linux-kernel-rootkit-detection](https://unfinished.bike/diy-linux-kernel-rootkit-detection)
+#### 2. Unususal Kernel Taints [kernel-taint.sh](https://github.com/tstromberg/sunlight/blob/main/kernel-taint.sh):
+
+<img width="1926" height="746" alt="image" src="https://github.com/user-attachments/assets/d734c211-efb6-4a6c-afb2-c9e2cc25fdf2" />
+
+> Can also be detected by : Osqueryi Sql Script: [unusually-tainted-kernel-linux.sql](https://github.com/chainguard-dev/osquery-defense-kit/blob/main/detection/evasion/unusually-tainted-kernel-linux.sql)
+
+#### 3. Detecting unusual `/dev` entries ([unexpected-device.sql](https://github.com/chainguard-dev/osquery-defense-kit/blob/main/detection/persistence/unexpected-device.sql), mode: .mode line):
+
+<img width="831" height="465" alt="image" src="https://github.com/user-attachments/assets/e350b12e-87d5-44f9-8917-f38838567572" />
+
+> Another rootkit detection paper by SANS: [Linux kernel rootkits: protecting the system’s “Ring-Zero”](https://www.giac.org/paper/gcux/243/linux-kernel-rootkits-protecting-systems-ring-zero/105411). Can be Explored, too!
+
 #### Detailed Blog article on ***reveng_rtkit*** LKM rootkit, is available [now](https://reveng007.github.io/blog/2022/03/08/reveng_rkit_detailed.html), where I have explained how I created this LKM rootkit step by step.
 
 > If you(viewers) have spotted anything erronious or something which should be made correct, haven't documented correctly or haven't credited someone's work properly, please don't hesitate to reach out to me via those social media handles listed at the end of this file.
